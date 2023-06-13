@@ -41,6 +41,7 @@ def create():
                 (title, body, g.user['id'])
             )
             db.commit()
+            flash('Success')
             return redirect(url_for('blog.index'))
 
     return render_template('blog/create.html')
